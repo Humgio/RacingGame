@@ -49,7 +49,6 @@
      <Compile Include="Assets\Script\Camera.cs" />
      <Compile Include="Assets\Script\DiskProjectile.cs" />
      <Compile Include="Assets\Script\Gate.cs" />
-     <Compile Include="Assets\Script\GateColorChanger.cs" />
      <Compile Include="Assets\Script\ObstacleSpawner.cs" />
      <Compile Include="Assets\Script\PlayerController.cs" />
      <Compile Include="Assets\Script_01\GameController.cs" />

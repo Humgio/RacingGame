@@ -10,7 +10,8 @@ public class PlayerController : MonoBehaviour {
     public float speed, hoverHeight, hoverForce,moveForward,bulletSpeed;
     public float xMin,xMax;
     public bool hovering, grounded;
-    public GameObject discProjectile;
+    public Transform ProjSpawn;
+    public GameObject discProjectile, projectileClone;
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody>();
@@ -45,7 +46,8 @@ public class PlayerController : MonoBehaviour {
         }
         if (Input.GetButtonDown("Shoot"))
         {
-            Instantiate(discProjectile,transform.position,Quaternion.identity);
+            projectileClone = Instantiate(discProjectile,ProjSpawn.position,Quaternion.identity) as GameObject;
+            Destroy(projectileClone, 10f);
         }
     }
 }
